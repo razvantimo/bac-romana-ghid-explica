@@ -1,18 +1,11 @@
-
 import { Check } from "lucide-react";
-
 const Author = () => {
-  return (
-    <section className="py-16 bg-white">
+  return <section className="py-16 bg-white">
       <div className="container">
         <div className="flex flex-col md:flex-row gap-10 items-center">
           <div className="md:w-1/3">
             <div className="rounded-lg overflow-hidden shadow-xl border-4 border-white">
-              <img 
-                src="/lovable-uploads/508ed4cd-1811-4d53-aa5a-e798c43c2099.png" 
-                alt="Professor Gabriel Braic" 
-                className="w-full h-auto"
-              />
+              <img alt="Professor Gabriel Braic" className="w-full h-auto" src="/lovable-uploads/23d16023-3478-4652-9358-01bfdaa96c2a.jpg" />
             </div>
           </div>
           
@@ -57,8 +50,6 @@ const Author = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Author;
