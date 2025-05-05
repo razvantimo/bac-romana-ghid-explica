@@ -1,14 +1,17 @@
 
 import { Button } from "@/components/ui/button";
 import { BookOpen } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Header = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <header className="bg-white py-4 border-b border-gray-100 shadow-sm">
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-2">
           <BookOpen className="h-6 w-6 text-teal" />
-          <span className="text-navy font-semibold text-xl">i-scoala.ro</span>
+          <span className={`text-navy font-semibold text-xl ${!isMobile ? 'mt-0.5' : ''}`}>i-scoala.ro</span>
         </div>
         <Button 
           className="bg-teal text-white hover:bg-teal/90"

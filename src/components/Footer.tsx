@@ -1,14 +1,17 @@
 
 import { BookOpen } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Footer = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <footer className="bg-navy/90 text-white py-12">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-2 mb-6 md:mb-0">
             <BookOpen className="h-6 w-6 text-teal" />
-            <span className="font-semibold text-xl">i-scoala.ro</span>
+            <span className={`font-semibold text-xl ${!isMobile ? 'mt-0.5' : ''}`}>i-scoala.ro</span>
           </div>
           
           <div className="flex flex-wrap justify-center gap-8">
