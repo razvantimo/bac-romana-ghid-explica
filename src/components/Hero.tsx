@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 const Hero = () => {
   return <section className="py-16 md:py-24 bg-navy bg-hero-pattern">
@@ -20,11 +21,8 @@ const Hero = () => {
             </p>
             <div className="mt-8">
               <Button className="bg-teal hover:bg-teal/90 text-white text-lg py-6 px-8 rounded-lg shadow-lg" onClick={() => {
-              const element = document.getElementById('cta');
-              element?.scrollIntoView({
-                behavior: 'smooth'
-              });
-            }}>
+                window.open("https://pro.i-scoala.ro/product/ebook-romana/?_gl=1*o124y2*_gcl_au*NDQwMDkzODM0LjE3NDA0Njk4MDEuNTk2MTU3MzM3LjE3NDM0MDQ0MDcuMTc0MzQwNDQwNw..", "_blank");
+              }}>
                 Descarcă Ghidul Acum
               </Button>
             </div>

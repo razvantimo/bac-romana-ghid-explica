@@ -102,7 +102,10 @@ const Pricing = () => {
                 </div>
               </div>
               
-              <Button className="w-full bg-teal hover:bg-teal/90 text-white py-6 text-lg font-medium">
+              <Button 
+                className="w-full bg-teal hover:bg-teal/90 text-white py-6 text-lg font-medium"
+                onClick={() => window.open("https://pro.i-scoala.ro/product/ebook-romana/?_gl=1*o124y2*_gcl_au*NDQwMDkzODM0LjE3NDA0Njk4MDEuNTk2MTU3MzM3LjE3NDM0MDQ0MDcuMTc0MzQwNDQwNw..", "_blank")}
+              >
                 Descarcă Ghidul Acum
               </Button>
               
