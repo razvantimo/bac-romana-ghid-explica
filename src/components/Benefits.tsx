@@ -1,3 +1,4 @@
+
 import { Check } from "lucide-react";
 const Benefits = () => {
   return <section className="py-16 bg-white">
@@ -11,7 +12,7 @@ const Benefits = () => {
           <div>
             <div className="mb-8">
               <div className="flex gap-4 items-start">
-                <div className="bg-teal rounded-full p-1 mt-1">
+                <div className="bg-teal rounded-full p-1 mt-1 flex-shrink-0">
                   <Check className="h-5 w-5 text-white" />
                 </div>
                 <div>
@@ -25,7 +26,7 @@ const Benefits = () => {
             
             <div className="mb-8">
               <div className="flex gap-4 items-start">
-                <div className="bg-teal rounded-full p-1 mt-1">
+                <div className="bg-teal rounded-full p-1 mt-1 flex-shrink-0">
                   <Check className="h-5 w-5 text-white" />
                 </div>
                 <div>
@@ -39,7 +40,7 @@ const Benefits = () => {
             
             <div className="mb-8">
               <div className="flex gap-4 items-start">
-                <div className="bg-teal rounded-full p-1 mt-1">
+                <div className="bg-teal rounded-full p-1 mt-1 flex-shrink-0">
                   <Check className="h-5 w-5 text-white" />
                 </div>
                 <div>
@@ -53,7 +54,7 @@ const Benefits = () => {
             
             <div>
               <div className="flex gap-4 items-start">
-                <div className="bg-teal rounded-full p-1 mt-1">
+                <div className="bg-teal rounded-full p-1 mt-1 flex-shrink-0">
                   <Check className="h-5 w-5 text-white" />
                 </div>
                 <div>

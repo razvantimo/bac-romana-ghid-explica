@@ -1,3 +1,4 @@
+
 import { Check } from "lucide-react";
 const Author = () => {
   return <section className="py-16 bg-white">
@@ -17,8 +18,8 @@ const Author = () => {
             
             <div className="space-y-4">
               <div className="flex gap-3">
-                <div className="bg-teal rounded-full p-1 mt-1">
-                  <Check className="h-4 w-4 text-white" />
+                <div className="bg-teal rounded-full p-1 mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5 text-white" />
                 </div>
                 <p className="text-gray-600">
                   <span className="font-semibold text-navy">Experiență remarcabilă.</span> De-a lungul carierei, a asistat mii de elevi în pregătirea lor pentru examenul maturității, ghidându-i cu profesionalism și dedicare.
@@ -26,8 +27,8 @@ const Author = () => {
               </div>
               
               <div className="flex gap-3">
-                <div className="bg-teal rounded-full p-1 mt-1">
-                  <Check className="h-4 w-4 text-white" />
+                <div className="bg-teal rounded-full p-1 mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5 text-white" />
                 </div>
                 <p className="text-gray-600">
                   <span className="font-semibold text-navy">Abordare practică și eficientă.</span> Cu o metodologie clară și exemple bine structurate, Gabriel Braic te va ajuta să înțelegi mai ușor cerințele examenului și să obții cele mai bune rezultate.
@@ -35,8 +36,8 @@ const Author = () => {
               </div>
               
               <div className="flex gap-3">
-                <div className="bg-teal rounded-full p-1 mt-1">
-                  <Check className="h-4 w-4 text-white" />
+                <div className="bg-teal rounded-full p-1 mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5 text-white" />
                 </div>
                 <p className="text-gray-600">
                   <span className="font-semibold text-navy">Partenerul succesului tău.</span> Prin acest ebook, profesorul Braic îți oferă toate instrumentele necesare pentru a naviga cu încredere printre subiectele de la Bacalaureat la Limba și Literatura Română.
