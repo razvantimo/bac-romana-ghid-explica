@@ -1,0 +1,27 @@
+
+import { Button } from "@/components/ui/button";
+import { BookOpen } from "lucide-react";
+
+const Header = () => {
+  return (
+    <header className="bg-white py-4 border-b border-gray-100 shadow-sm">
+      <div className="container flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <BookOpen className="h-6 w-6 text-teal" />
+          <span className="text-navy font-semibold text-xl">i-scoala.ro</span>
+        </div>
+        <Button 
+          className="bg-teal text-white hover:bg-teal/90"
+          onClick={() => {
+            const element = document.getElementById('cta');
+            element?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          Descarcă Ghidul
+        </Button>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
