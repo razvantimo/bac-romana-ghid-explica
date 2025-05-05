@@ -1,9 +1,6 @@
-
 import { Check } from "lucide-react";
-
 const Benefits = () => {
-  return (
-    <section className="py-16 bg-white">
+  return <section className="py-16 bg-white">
       <div className="container">
         <h2 className="text-3xl font-bold text-navy text-center mb-4">Detaliile Ghidului PDF</h2>
         <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">
@@ -70,19 +67,13 @@ const Benefits = () => {
           </div>
           
           <div className="relative">
-            <img 
-              src="/lovable-uploads/496a4cf4-7bdc-47fb-bb90-c460d152b64f.png"
-              alt="Învață în ritmul tău pentru Bacalaureat" 
-              className="rounded-lg shadow-xl"
-            />
+            <img alt="Învață în ritmul tău pentru Bacalaureat" className="rounded-lg shadow-xl" src="/lovable-uploads/843d0300-9eeb-4380-bde8-dd1674f7b8ce.jpg" />
             <div className="absolute -bottom-5 -right-5 bg-teal text-white py-2 px-4 rounded-lg shadow-lg">
               <p className="text-sm font-medium">www.i-scoala.ro</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Benefits;
