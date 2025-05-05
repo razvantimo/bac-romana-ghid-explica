@@ -247,5 +247,14 @@ const Terms = () => {
             <p>Folosim cookie-uri proprii și terțe pentru a colecta statistici și date ale utilizatorilor în formă agregată și individuală în instrumente de analiză pentru a ne optimiza site-ul și pentru a vă oferi materiale de marketing relevante. Unele cookie-uri terțe sunt setate de servicii care apar pe paginile noastre și sunt în afara controlului nostru. De asemenea, folosim cookie-uri terța parte care urmăresc activitatea pe mai multe site-uri pentru a va oferi marketing pe alte site-uri/canale.</p>
 
             <h3 className="text-xl font-semibold text-navy">Cine are acces la datele dumneavoastră cu caracter personal?</h3>
+            
+            <p>Datele transmise unor terți sunt utilizate numai pentru a vă oferi serviciile menționate mai sus, un instrument de analiza este folosit pentru a colecta statistici în scopul optimizării site-ului nostru și pentru a vă prezenta materiale relevante. Informațiile conținute în acest site, precum: imagini, grafică, poze, clipuri video, texte și alte materiale care apar postate au caracter informativ și orientativ și pot suferi modificări.</p>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
-            <p>Datele transmise unor terți sunt utilizate numai pentru a vă oferi serviciile menționate mai sus, un instrument de analiza este folosit pentru a colecta statistici în scopul optimizării site-ului nostru
+export default Terms;
