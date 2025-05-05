@@ -12,7 +12,7 @@ const Footer = () => {
           </div>
           
           <div className="flex flex-wrap justify-center gap-8">
-            <a href="#" className="text-light-blue/80 hover:text-teal transition-colors">
+            <a href="/terms" className="text-light-blue/80 hover:text-teal transition-colors">
               Termeni și condiții
             </a>
             <a href="#" className="text-light-blue/80 hover:text-teal transition-colors">
