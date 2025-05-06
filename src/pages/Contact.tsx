@@ -1,5 +1,4 @@
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -11,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import Footer from "@/components/Footer";
 import Header from "../components/Header";
+import emailjs from 'emailjs-com';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Numele trebuie să aibă cel puțin 2 caractere" }),
@@ -22,6 +22,14 @@ type FormValues = z.infer<typeof formSchema>;
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailJSInitialized, setEmailJSInitialized] = useState(false);
+  
+  // Initialize EmailJS once when component mounts
+  useEffect(() => {
+    // Use your own public key - this is just a placeholder
+    emailjs.init("YOUR_PUBLIC_KEY");
+    setEmailJSInitialized(true);
+  }, []);
   
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -32,20 +40,44 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = (values: FormValues) => {
+  const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
-    // In a real app, this would send the data to a server
-    console.log(values);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Prepare the template parameters
+      const templateParams = {
+        to_email: "iscoala.ro@gmail.com",
+        from_name: values.name,
+        from_email: values.email,
+        message: values.message,
+      };
+      
+      // Send the email using EmailJS
+      // Replace these parameters with your actual EmailJS service ID and template ID
+      await emailjs.send(
+        "YOUR_SERVICE_ID", 
+        "YOUR_TEMPLATE_ID", 
+        templateParams
+      );
+      
+      // Show success message
       toast({
         title: "Mesaj trimis",
         description: "Îți mulțumim pentru mesaj! Te vom contacta în curând.",
       });
+      
+      // Reset the form
       form.reset();
-    }, 1000);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Eroare",
+        description: "A apărut o eroare la trimiterea mesajului. Te rugăm să încerci din nou.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -135,7 +167,7 @@ const Contact = () => {
                   
                   <Button 
                     type="submit" 
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !emailJSInitialized}
                     className="w-full md:w-auto"
                   >
                     {isSubmitting ? "Se trimite..." : "Trimite mesaj"}
