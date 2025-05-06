@@ -12,7 +12,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/34091540-6a94-4bdf-8d53-f00d2b899b47.png" 
             alt="i-scoala logo" 
-            className="h-6 w-6"
+            className="h-10 w-auto" 
           />
           <span className={`text-navy font-semibold text-xl ${!isMobile ? 'mt-0.5' : ''}`}>i-scoala.ro</span>
         </a>
