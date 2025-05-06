@@ -18,7 +18,7 @@ const Footer = () => {
             <a href="/terms" className="text-light-blue/80 hover:text-teal transition-colors">
               Termeni și condiții
             </a>
-            <a href="#" className="text-light-blue/80 hover:text-teal transition-colors">
+            <a href="/privacy" className="text-light-blue/80 hover:text-teal transition-colors">
               Politica de confidențialitate
             </a>
             <a href="mailto:contact@i-scoala.ro" className="text-light-blue/80 hover:text-teal transition-colors">
