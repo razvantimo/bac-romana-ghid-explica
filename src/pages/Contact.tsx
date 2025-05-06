@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -26,8 +27,8 @@ const Contact = () => {
   
   // Initialize EmailJS once when component mounts
   useEffect(() => {
-    // Use your own public key - this is just a placeholder
-    emailjs.init("YOUR_PUBLIC_KEY");
+    // Replace with your actual public key from EmailJS
+    emailjs.init("YOUR_ACTUAL_PUBLIC_KEY");
     setEmailJSInitialized(true);
   }, []);
   
@@ -53,10 +54,10 @@ const Contact = () => {
       };
       
       // Send the email using EmailJS
-      // Replace these parameters with your actual EmailJS service ID and template ID
+      // Replace with your actual EmailJS service ID and template ID
       await emailjs.send(
-        "YOUR_SERVICE_ID", 
-        "YOUR_TEMPLATE_ID", 
+        "YOUR_ACTUAL_SERVICE_ID", 
+        "YOUR_ACTUAL_TEMPLATE_ID", 
         templateParams
       );
       
